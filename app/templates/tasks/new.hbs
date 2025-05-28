@@ -1,0 +1,33 @@
+{{page-title "New"}}
+{{!-- {{outlet}} --}}
+
+{{!-- <h3 class="add-new-task__title">Add a new task</h3>
+
+<div class="add-new-task">
+    <div class="add-new-task__container">
+        <form class="add-new-task__form" {{on "submit" this.addNewTask}}>
+            <div class="add-new-task__form-group">
+                <label for="task-title">Task Title</label>
+                <input type="text" id="task-title" {{on "input" this.updateTitle}} required>
+            </div>
+            <div class="add-new-task__form-group">
+                <label for="task-description">Task Description</label>
+                <textarea id="task-description" {{on "input" this.updateDescription}} required></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary">Add Task</button>
+        </form>
+    </div>
+</div> --}}
+
+<h1 class="new-task__title">New Task</h1>
+
+<TaskForm
+    @title={{this.title}}
+    @description={{this.description}}
+    @status={{this.status}}
+    @onTitleChange={{this.updateTitle}}
+    @onDescriptionChange={{this.updateDescription}}
+    @onStatusChange={{this.updateStatus}}
+    @onSubmit={{this.addNewTask}}
+    @submitLabel="Add Task"
+/>

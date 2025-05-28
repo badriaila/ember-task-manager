@@ -1,0 +1,18 @@
+
+
+
+{{page-title "Tasks"}}
+
+<LinkTo @route="tasks.new" class="btn btn--primary">Add a new Task</LinkTo>
+
+<ul>
+    {{#each this.model as  |task|}}
+
+        <li>
+            <TaskCard @task={{task}} @showLink={{true}} />
+        </li>
+
+    {{/each}}
+</ul>
+
+{{outlet}}

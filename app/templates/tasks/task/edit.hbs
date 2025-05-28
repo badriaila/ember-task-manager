@@ -1,0 +1,50 @@
+{{page-title "Edit"}}
+<h1>Edit Task</h1>
+{{!-- <div class="edit-task">
+    <div class="edit-task__container">
+        <form {{on "submit" this.editTask}} class="edit-task__form">
+            <div class="edit-task__form-group">
+                <label for="title">Title</label>
+                <input type="text" id="title" value={{this.model.title}} {{on "input" this.updateTitle}} required>
+            </div>
+            <div class="edit-task__form-group">
+                <label for="description">Description</label>
+                <textarea id="description" {{on "input" this.updateDescription}} required>{{this.model.description}}</textarea>
+            </div>
+            <div class="edit-task__form-group">
+                <label for="status">Status</label>
+                <select id="status" value={{this.model.status}} {{on "change" this.updateStatus}} required>
+                    <option value="todo">Pending</option>
+                    <option value="in-progress">In Progress</option>
+                    <option value="done">Done</option>
+                </select>   
+            </div>
+            <button type="submit" class="edit-task__submit-button">Save Changes</button>
+            <LinkTo @route="tasks.task" @model={{this.model}} class="edit-task__cancel-button">Cancel</LinkTo>
+            <button type="button" class="edit-task__delete-button" {{on "click" this.deleteTask}}>Delete Task</button>
+        </form>
+    </div>
+</div> --}}
+
+<TaskForm
+    @title={{this.model.title}}
+    @description={{this.model.description}}
+    @status={{this.model.status}}
+    @onTitleChange={{this.updateTitle}}
+    @onDescriptionChange={{this.updateDescription}}
+    @onStatusChange={{this.updateStatus}}
+    @onSubmit={{this.editTask}}
+    @submitLabel="Save Changes"
+>
+<LinkTo @route="tasks.task" @model={{this.model}} class="edit-task__cancel-button">Cancel</LinkTo>
+<button type="button" class="edit-task__delete-button" {{on "click" this.deleteTask}}>Delete Task</button>
+</TaskForm>
+
+
+
+
+
+        
+
+
+

@@ -1,0 +1,23 @@
+/* Ember supports plain CSS out of the box. More info: https://cli.emberjs.com/release/advanced-use/stylesheets/ */
+
+.task-card{
+    background-color: ivory;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.task-card__title{
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem;
+}
+
+.task-card__status{
+    font-size: 1rem;
+    color: #666;
+}
+
+ul li{
+    list-style-type: none;
+    margin: 0.5rem 0;
+}

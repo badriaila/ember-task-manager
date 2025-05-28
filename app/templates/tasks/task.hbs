@@ -1,0 +1,10 @@
+{{page-title this.model.title}}
+
+<h3>Task Details</h3>
+
+<p class="task-title">Task Title: {{this.model.title}}</p>
+<p class="task-description">Task Description: {{this.model.description}}</p>
+
+<LinkTo @route = "tasks.task.edit" @model={{this.model}}>Edit Task</LinkTo>
+
+{{outlet}}
