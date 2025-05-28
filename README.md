@@ -1,132 +1,132 @@
-📝 Task Manager App (Built with Ember.js)
+# 📝 Task Manager App (Built with Ember.js)
 
 This project is part of my Ember.js learning journey. Built with attention to reusability, routing, and frontend logic using modern Ember practices.
 
 This is a simple Task Manager web application built using Ember.js. It allows users to:
 
-Log in (planned)
+- Log in (planned)
 
-View all tasks
+- View all tasks
 
-View individual task details
+- View individual task details
 
-Create a new task
+- Create a new task
 
-Edit an existing task
+- Edit an existing task
 
-Delete a task
+- Delete a task
 
-View the history of changes (coming soon)
+- View the history of changes (coming soon)
 
-🚀 Getting Started
+## 🚀 Getting Started
 
 1. Install Ember CLI
-
+```bash
 npm install -g ember-cli
-
+```
 2. Create the Project
-
+```bash
 ember new task-manager
 cd task-manager
-
+```
 3. Add Ember Mirage for Mock API
-
+```bash
 ember install ember-cli-mirage
-
+```
 Mirage is used to simulate API calls during development.
 
-📁 Project Structure Overview
+## 📁 Project Structure Overview
 
-app/templates/ – contains route-based templates
+- app/templates/ – contains route-based templates
 
-app/components/ – reusable UI components
+- app/components/ – reusable UI components
 
-app/routes/ – route logic and data fetching
+- app/routes/ – route logic and data fetching
 
-app/controllers/ – stores local state for forms
+- app/controllers/ – stores local state for forms
 
-mirage/ – fake backend using Mirage
+- mirage/ – fake backend using Mirage
 
-scenarios/ – seed data for development
+- scenarios/ – seed data for development
 
-serializers/ – control how Mirage returns data
+- serializers/ – control how Mirage returns data
 
-✅ Features Completed
+## ✅ Features Completed
 
 1. Routing & Templates
 
-/tasks – view task list
+    * <code>/tasks</code> – view task list
 
-/tasks/:id – view task detail
+    * <code>/tasks/:id</code> – view task detail
 
-/tasks/new – create a new task
+    * <code>/tasks/new</code> – create a new task
 
-/tasks/:id/edit – edit a task
+    * <code>/tasks/:id/edit</code> – edit a task
 
 2. Reusable Form Component
 
-<TaskForm /> used for both Create and Edit task
+    * <code>```<TaskForm/>```</code> used for both Create and Edit task
 
-Takes title, description, status as arguments
+    * Takes <code>title, description, status</code> as arguments
 
-Emits onSubmit, onTitleChange, etc.
+    * Emits <code>onSubmit, onTitleChange, etc</code>.
 
 3. Mock Backend (Mirage)
 
-GET /api/tasks – get all tasks
+    * <code>GET /api/tasks</code> – get all tasks
 
-GET /api/tasks/:id – get task detail
+    * <code>GET /api/tasks/:id</code> – get task detail
 
-POST /api/tasks – create new task
+    * <code>POST /api/tasks</code> – create new task
 
-PATCH /api/tasks/:id – update task
+    * <code>PATCH /api/tasks/:id</code> – update task
 
-DELETE /api/tasks/:id – delete task
+    * <code>DELETE /api/tasks/:id</code> – delete task
 
 4. TaskCard Component
 
-Displays individual task nicely in list
+    * Displays individual task nicely in list
 
-🧠 Key Learnings
+## 🧠 Key Learnings
 
-Difference between routes, templates, and components in Ember
+* Difference between routes, templates, and components in Ember
 
-How to reuse form code via components
+* How to reuse form code via components
 
-How query params and refreshModel can re-trigger model hooks
+* How query params and refreshModel can re-trigger model hooks
 
-How Mirage helps simulate a real backend
+* How Mirage helps simulate a real backend
 
-How to handle navigation using @service router
+* How to handle navigation using <code>@service</code> router
 
-🔜 Next Steps (Planned)
+## 🔜 Next Steps (Planned)
 
 🧩 1. Track Task Change History
 
-Log and display changes (old vs new values)
+  * Log and display changes (old vs new values)
 
-Show history per task below task detail
+  * Show history per task below task detail
 
 👤 2. Add Login Functionality
 
-Use session or token simulation
+  * Use session or token simulation
 
-Only show tasks for logged-in users
+  * Only show tasks for logged-in users
 
 🛡️ 3. Add Validation & Error Handling
 
-Prevent empty fields
+  * Prevent empty fields
 
-Show loading & error messages
+  * Show loading & error messages
 
 💾 4. Replace Mirage with Real API
 
-Use Express/FastAPI backend later
+  * Use Express/FastAPI backend later
 
 🎨 5. Add CSS Styling
 
-Use global CSS for layout and colors
+  * Use global CSS for layout and colors
 
-Add responsive styles for mobile
+  * Add responsive styles for mobile
 
 
