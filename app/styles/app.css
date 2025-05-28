@@ -111,6 +111,7 @@ main{
 }
 
 .login__footer{
+    margin-top: 1rem;
     display: flex;
     justify-content:space-between
 }
@@ -122,6 +123,81 @@ main{
 }
 
 .login__footer a:hover{
+    color: darkblue;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in;
+}
+
+
+ /* Register Page Styling */
+
+ .register__container{
+    background-color: white;
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgb(0 0 0 / 10%);
+ }
+
+ .register__container h2{
+    text-align: center;
+    color: #343a40;
+ }
+
+ .register__form{
+    display: flex;
+    flex-direction: column;
+ }
+
+.register__form label{
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: #343a40;
+}
+
+.register__form input{
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+ }
+
+ .register__button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+ }
+
+ .register__form button{
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+ }
+
+.register__form button:hover{
+    background-color: #218838;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.register__footer{
+    margin-top: 1rem;
+    display: flex;
+}
+
+.register__footer a{
+    display: inline-block;
+    font-size: 1rem;
+    color:blue;
+}
+.register__footer a:hover{
     color: darkblue;
     transform: scale(1.05);
     transition: all 0.3s ease-in;
