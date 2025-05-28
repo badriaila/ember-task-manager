@@ -17,7 +17,112 @@
     color: #666;
 }
 
-ul li{
-    list-style-type: none;
-    margin: 0.5rem 0;
+
+/* Navbar Styling */
+
+.navbar{
+    background-color: #343a40;
+    color:white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links{
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a{
+    display: inline-block;
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover{
+    transform: scale(1.25);
+    transition: ease-in 0.3s;
+}
+
+main{
+    padding: 2rem;
+}
+
+
+ /* Login Page Styling */
+
+ .login__container{
+    background-color: white;
+    max-width: 400px;
+    margin: 4rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgb(0 0 0 / 10%);
+ }
+
+ .login__container h2{
+    text-align: center;
+    color: #343a40;
+ }
+
+ .login__form{
+    display: flex;
+    flex-direction: column;
+
+ }
+
+ .login__form label{
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: #343a40;
+ }
+
+ .login__form input{
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+ }
+
+ .login__button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+ }
+
+ .login__form button{
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+ }
+
+.login__form button:hover{
+    background-color: #0056b3;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+.login__footer{
+    display: flex;
+    justify-content:space-between
+}
+
+.login__footer a{
+    display: inline-block;
+    font-size: 1rem;
+    color:blue;
+}
+
+.login__footer a:hover{
+    color: darkblue;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in;
 }

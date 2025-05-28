@@ -1,18 +1,21 @@
 {{page-title "TaskManager"}}
 
-<h1>Hello</h1>
+<header class="navbar">
+    <h1 class="page-title">Task Manager</h1>
 
-<nav>
-    <ul>
-        <li><LinkTo @route="register">Register</LinkTo>
-        <li><LinkTo @route="login">Login</LinkTo></li>
-        <li><LinkTo @route="tasks">Tasks</LinkTo></li>
-        <li><LinkTo @route="history">History</LinkTo></li>
-        </li>
-    </ul>
+    <nav class="nav-links">
+
+      <LinkTo @route="register">Register</LinkTo>
+       <LinkTo @route="login">Login</LinkTo>
+        <LinkTo @route="tasks">Tasks</LinkTo>
+      <LinkTo @route="history">History</LinkTo>  
 </nav>
+</header>
 
-{{outlet}}
+<main>
+    {{outlet}}
+</main>
+
 
 {{! The following component displays Ember's default welcome message. }}
 {{!-- <WelcomePage /> --}}

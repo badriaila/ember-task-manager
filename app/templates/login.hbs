@@ -3,23 +3,26 @@
 
 <div class="login">
   <div class="login__container">
-    <h1 class="login__title">Task Manager</h1>
-    <form class="login__form" {{action "login" on="submit"}}>
-      <div class="login__form-group">
-        <label for="username">Username</label>
-        <input type="text" id="username">
+    <h2 class="login__title">Login</h2>
+    <form class="login__form" {{on "submit" this.login}}>
+
+      <label for="username">Username</label>
+      <input type="text" id="username">
+
+      <label for="password">Password</label>
+      <input type="password" id="password">
+
+      <div class="login__button">
+       <button type="submit" class="btn btn--primary">Login</button>
       </div>
-      <div class="login__form-group">
-        <label for="password">Password</label>
-        <input type="password" id="password">
+    
+       <div class="login__footer">
+        <LinkTo @route="register">Register</LinkTo>
+        <LinkTo @route="forgot-password">Forgot password?</LinkTo>
       </div>
-      <button type="submit" class="btn btn--primary">Login</button>
     </form>
   </div>
 </div>
 
 
-  <div class="login__footer">
-    <p>Don't have an account? <a href="/register">Register</a></p>
-    <p>Forgot your password? <a href="/reset-password">Reset it</a></p>
-    </div>
+ 

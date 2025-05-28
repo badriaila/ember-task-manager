@@ -16,4 +16,5 @@ Router.map(function () {
     this.route('new');
   });
   this.route('history');
+  this.route('forgot-password');
 });
