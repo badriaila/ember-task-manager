@@ -34,14 +34,17 @@ function routes() {
   });
 
   this.post("/tasks", (schema, request) => {
-    let attrs = JSON.parse(request.requestBody).task;
+    // console.log('request', request);
+    console.log('🔥 POST /api/tasks hit in Mirage TEST');
+    let attrs = JSON.parse(request.requestBody).data;
     console.log('attrs', attrs);
     return schema.tasks.create(attrs);
   });
 
   this.put("/tasks/:id", (schema, request) => {
+    // console.log('request', request);
     let id = request.params.id;
-    let attrs = JSON.parse(request.requestBody).task;
+    let attrs = JSON.parse(request.requestBody).data;
     console.log('attrs', attrs);
     let task = schema.tasks.find(id);
     return task.update(attrs);
@@ -54,7 +57,7 @@ function routes() {
     return task.destroy();
   }
   );
-
+}
   
 
 
@@ -82,4 +85,3 @@ function routes() {
 
     https://miragejs.com/docs/getting-started/overview/
   */
-}

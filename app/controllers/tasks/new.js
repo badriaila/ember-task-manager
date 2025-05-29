@@ -67,7 +67,7 @@ export default class TasksNewController extends Controller {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ task: newTask })
+      body: JSON.stringify({ data: newTask })
     });
 
     this.router.transitionTo('tasks', {

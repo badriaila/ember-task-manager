@@ -41,7 +41,7 @@
 >
 
 
-    <button class="cancel_button"><LinkTo @route="tasks.task" @model={{this.model}} class="edit-task__cancel-button">Cancel</LinkTo></button>
+    <button class="cancel_button" type="button"><LinkTo @route="tasks.task" @model={{this.model}} class="edit-task__cancel-button">Cancel</LinkTo></button>
     <button type="button" class="delete_button" {{on "click" this.deleteTask}}>Delete Task</button>
 
 

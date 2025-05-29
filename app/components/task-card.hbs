@@ -1,10 +1,10 @@
 {{yield}}
 
-<article class="task-card">
-  <h3 class="task-card__title">{{@task.title}}</h3>
-  <p class="task-card__status"><strong>Status:</strong> {{@task.status}}</p>
+<article class="task-card" data-test-task-card>
+  <h3 class="task-card__title" data-test-task-title>{{@task.title}}</h3>
+  <p class="task-card__status" data-test-task-status><strong>Status:</strong> {{@task.status}}</p>
 
   {{#if @showLink}}
-    <LinkTo @route="tasks.task" @model={{@task}}>View Details</LinkTo>
+    <LinkTo @route="tasks.task" @model={{@task}} data-test-task-link>View Details</LinkTo>
   {{/if}}
 </article>

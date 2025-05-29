@@ -8,9 +8,9 @@ export default class TasksTaskEditController extends Controller {
 
     @service router;
 
-    @tracked title = '';
-    @tracked description = '';
-    @tracked status = 'pending';
+    @tracked title = this.model.title || '';
+    @tracked description = this.model.description || '';
+    @tracked status = this.model.status || 'pending';
 
     @tracked titleError = null;
     @tracked descriptionError = null;
@@ -50,6 +50,7 @@ export default class TasksTaskEditController extends Controller {
     @action
     async editTask(event){
         event.preventDefault();
+        // console.log('model', this.model);
 
         if (this.titleError || this.descriptionError) {
             console.error('Validation errors:', this.titleError, this.descriptionError);
@@ -68,7 +69,7 @@ export default class TasksTaskEditController extends Controller {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ task: updatedTask })
+            body: JSON.stringify({ data: updatedTask })
         });
 
         this.router.transitionTo('tasks', {

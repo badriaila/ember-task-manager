@@ -8,27 +8,27 @@
 
 <form {{on "submit" @onSubmit}} class="task-form">
     <label>Title<sup class="required">*</sup> </label>
-    <input type="text" value={{@title}} {{on "change" @onTitleChange}} required/>
+    <input type="text" value={{@title}} {{on "change" @onTitleChange}} required data-test-title/>
     {{#if @titleError}}
-        <span class="error">{{@titleError}}</span>
+        <span class="error" data-test-title-error>{{@titleError}}</span>
     {{/if}}
 
     <label>Description<sup class="required">*</sup></label>
-    <textarea {{on "change" @onDescriptionChange}} required>{{@description}}</textarea>
+    <textarea {{on "change" @onDescriptionChange}} required data-test-description>{{@description}}</textarea>
 
     {{#if @descriptionError}}
-        <span class="error">{{@descriptionError}}</span>
+        <span class="error" data-test-description-error>{{@descriptionError}}</span>
     {{/if}}
 
     <label>Status<sup class="required">*</sup></label>
-    <select value={{@status}} {{on "change" @onStatusChange}}>
+    <select value={{@status}} {{on "change" @onStatusChange}} data-test-status>
         <option value="todo">Pending</option>
         <option value="in-progress">In Progress</option>
         <option value="done">Done</option>
     </select>
 
     <div class="task-form__button">
-        <button type="submit" class="save_button">{{@submitLabel}}</button>
+        <button type="submit" class="save_button" data-test-submit>{{@submitLabel}}</button>
         {{yield}}
     </div>
     

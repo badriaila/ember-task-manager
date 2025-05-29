@@ -279,7 +279,7 @@ main{
  }
 
  .task-form__button .cancel_button{
-    background-color: rgb(241, 177, 15);
+    background-color: rgb(241 177 15);
  }
 
  .task-form__button .cancel_button a{
