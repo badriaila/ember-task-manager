@@ -4,9 +4,9 @@ export default class TasksTaskRoute extends Route {
     model(params) {
         return fetch(`/api/tasks/${params.task_id}`)
             .then((res) => res.json())
-            .then((json) => ({
-                id: json.data.id,
-                ...json.data.attributes
-            }));
+            .then(json => {
+                console.log('Task data fetched:', json);
+                return json.data;
+            });
         }
 }
