@@ -1,5 +1,4 @@
 {{page-title "Edit"}}
-<h1>Edit Task</h1>
 {{!-- <div class="edit-task">
     <div class="edit-task__container">
         <form {{on "submit" this.editTask}} class="edit-task__form">
@@ -27,6 +26,7 @@
 </div> --}}
 
 <TaskForm
+    @formTitle="Edit Task"
     @title={{this.model.title}}
     @description={{this.model.description}}
     @status={{this.model.status}}
@@ -39,8 +39,12 @@
     @titleError={{this.titleError}}
     @descriptionError={{this.descriptionError}}
 >
-<LinkTo @route="tasks.task" @model={{this.model}} class="edit-task__cancel-button">Cancel</LinkTo>
-<button type="button" class="edit-task__delete-button" {{on "click" this.deleteTask}}>Delete Task</button>
+
+
+    <button class="cancel_button"><LinkTo @route="tasks.task" @model={{this.model}} class="edit-task__cancel-button">Cancel</LinkTo></button>
+    <button type="button" class="delete_button" {{on "click" this.deleteTask}}>Delete Task</button>
+
+
 </TaskForm>
 
 

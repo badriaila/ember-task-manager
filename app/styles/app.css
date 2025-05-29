@@ -207,6 +207,88 @@ main{
 
 /* Task-Form Styling */
 
+.task-form__container{
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgb(0 0 0 / 10%);
+}
+
+ .task-form__container h2{
+    text-align: center;
+    color: #343a40;
+ }
+
+.task-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.task-form label{
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: #343a40;
+}
+
+.task-form input, textarea, select{
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+ }
+
+ .task-form textarea{
+    resize: vertical;
+    min-height: 100px;
+ }
+
+
+.task-form__button{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+ }
+
+
+
+ .task-form__button button{
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+ }
+
+ .task-form__button button:hover{
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+ }
+
+ .task-form__button .save_button{
+    background-color: #007bff;
+ }
+
+.task-form__button .delete_button{
+    background-color: red;
+ }
+
+ .task-form__button .cancel_button{
+    background-color: rgb(241, 177, 15);
+ }
+
+ .task-form__button .cancel_button a{
+    color: white;
+    text-decoration: none;
+  }
+
+
+
 
 /* Form Validations */
 
