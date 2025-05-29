@@ -35,6 +35,9 @@
     @onStatusChange={{this.updateStatus}}
     @onSubmit={{this.editTask}}
     @submitLabel="Save Changes"
+
+    @titleError={{this.titleError}}
+    @descriptionError={{this.descriptionError}}
 >
 <LinkTo @route="tasks.task" @model={{this.model}} class="edit-task__cancel-button">Cancel</LinkTo>
 <button type="button" class="edit-task__delete-button" {{on "click" this.deleteTask}}>Delete Task</button>

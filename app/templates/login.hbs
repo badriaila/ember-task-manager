@@ -6,15 +6,21 @@
     <h2 class="login__title">Login</h2>
     <form class="login__form" {{on "submit" this.login}}>
 
-      <label for="username">Username</label>
-      <input type="text" id="username">
+      <label for="username">Username<sup class="required">*</sup></label>
+      <input type="text" id="username" required>
 
-      <label for="password">Password</label>
-      <input type="password" id="password">
+      <label for="password">Password<sup class="required">*</sup></label>
+      <input type="password" id="password" required>
 
       <div class="login__button">
        <button type="submit" class="btn btn--primary">Login</button>
       </div>
+
+      {{#if this.loginError}}
+        <div class="error">{{this.loginError}}</div>
+      {{/if}}
+
+
     
        <div class="login__footer">
         <LinkTo @route="register">Don't have an account? Register</LinkTo>

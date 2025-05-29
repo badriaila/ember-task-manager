@@ -2,14 +2,19 @@
 
 
 <form {{on "submit" @onSubmit}}>
-    <label>Title:
-        <input type="text" value={{@title}} {{on "input" @onTitleChange}} />
-    </label>
+    <label>Title: </label>
+    <input type="text" value={{@title}} {{on "change" @onTitleChange}} />
+    {{#if @titleError}}
+        <span class="error">{{@titleError}}</span>
+    {{/if}}
     <br><br>
 
     <label>Description:
-        <textarea {{on "input" @onDescriptionChange}}>{{@description}}</textarea>
+        <textarea {{on "change" @onDescriptionChange}}>{{@description}}</textarea>
     </label>
+    {{#if @descriptionError}}
+        <span class="error">{{@descriptionError}}</span>
+    {{/if}}
     <br><br>
 
     <label>Status:

@@ -1,27 +1,45 @@
 import Controller from '@ember/controller';
 import { action } from '@ember/object';
 import { service } from '@ember/service';
+import { tracked } from '@glimmer/tracking';
 
 export default class TasksTaskEditController extends Controller {
 
 
     @service router;
 
-    title = '';
-    description = '';
-    status = 'pending';
+    @tracked title = '';
+    @tracked description = '';
+    @tracked status = 'pending';
+
+    @tracked titleError = null;
+    @tracked descriptionError = null;
     
     @action
     updateTitle(event) {
-        this.title = event.target.value;
+        this.title = event.target.value.trimStart();
         console.log(this.title);
-        // console.log(this.model);
+        
+        if (this.title === '') {
+            this.titleError = 'Title is required';
+        } else if (this.title.length < 3) {
+            this.titleError = 'Title must be at least 3 characters long';
+        } else {
+            this.titleError = null;
+        }
     }
 
     @action
     updateDescription(event) {
-        this.description = event.target.value;
+        this.description = event.target.value.trimStart();
         console.log(this.description);
+        if (this.description === '') {
+            this.descriptionError = 'Description is required';
+        } else if (this.description.length < 10) {
+            this.descriptionError = 'Description must be at least 10 characters long';
+        } else {
+            this.descriptionError = null;
+        }
     }
 
     @action
@@ -32,6 +50,12 @@ export default class TasksTaskEditController extends Controller {
     @action
     async editTask(event){
         event.preventDefault();
+
+        if (this.titleError || this.descriptionError) {
+            console.error('Validation errors:', this.titleError, this.descriptionError);
+            return;
+        }
+        
 
         const updatedTask = {
             title: this.title,
