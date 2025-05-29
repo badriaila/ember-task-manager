@@ -91,6 +91,12 @@ Mirage is used to simulate API calls during development.
 
     * Added validations for Login, Register, Add a new task, and Edit task forms. Utilized Ember's handlebars to display the errors.
 
+6. Testing
+
+    * Acceptance Tests
+        - Added acceptance tests for adding a new task form
+        - Added acceptance tests for editing the task form
+
 ## 📸 Screenshots
 
 Below are some of the screenshots from the website UI.
