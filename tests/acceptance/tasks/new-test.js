@@ -26,7 +26,7 @@ module('Acceptance | tasks/new', function (hooks) {
     await click('[data-test-submit]');
 
     await settled();
-
+    
     assert.ok(currentURL().startsWith('/tasks'), 'User is redirected to /tasks');
     assert.dom('[data-test-task-title]').includesText('Acceptance Test Task', 'New task title is displayed');
   });
