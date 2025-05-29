@@ -7,20 +7,20 @@
 </h2>
 
 <form {{on "submit" @onSubmit}} class="task-form">
-    <label>Title: </label>
-    <input type="text" value={{@title}} {{on "change" @onTitleChange}} />
+    <label>Title<sup class="required">*</sup> </label>
+    <input type="text" value={{@title}} {{on "change" @onTitleChange}} required/>
     {{#if @titleError}}
         <span class="error">{{@titleError}}</span>
     {{/if}}
 
-    <label>Description:</label>
-    <textarea {{on "change" @onDescriptionChange}}>{{@description}}</textarea>
+    <label>Description<sup class="required">*</sup></label>
+    <textarea {{on "change" @onDescriptionChange}} required>{{@description}}</textarea>
 
     {{#if @descriptionError}}
         <span class="error">{{@descriptionError}}</span>
     {{/if}}
 
-    <label>Status:</label>
+    <label>Status<sup class="required">*</sup></label>
     <select value={{@status}} {{on "change" @onStatusChange}}>
         <option value="todo">Pending</option>
         <option value="in-progress">In Progress</option>

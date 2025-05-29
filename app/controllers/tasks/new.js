@@ -52,12 +52,6 @@ export default class TasksNewController extends Controller {
 
     event.preventDefault();
 
-
-    // Validate inputs
-    
-
-    
-
     if (this.titleError || this.descriptionError){
       return;
     }
@@ -75,6 +69,7 @@ export default class TasksNewController extends Controller {
       },
       body: JSON.stringify({ task: newTask })
     });
+
     this.router.transitionTo('tasks', {
         queryParams: {
             refresh: Date.now()

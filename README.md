@@ -87,6 +87,29 @@ Mirage is used to simulate API calls during development.
 
     * Displays individual task nicely in list
 
+5. Form Validations
+
+    * Added validations for Login, Register, Add a new task, and Edit task forms. Utilized Ember's handlebars to display the errors.
+
+## 📸 Screenshots
+
+Below are some of the screenshots from the website UI.
+
+* Note: Some of the styling and functionality is yet to be added for pages like tasks, history
+
+### Register page
+![Task List](public/screenshots/register.png)
+
+### Login page
+![Task List](public/screenshots/login.png)
+
+### Add a new task form
+![Task List](public/screenshots/addTask.png)
+
+### Edit task page
+![Task List](public/screenshots/editTask.png)
+
+
 ## 🧠 Key Learnings
 
 * Difference between routes, templates, and components in Ember
